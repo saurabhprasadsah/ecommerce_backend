@@ -9,6 +9,10 @@ app.use(express.json())
 mongoose.connect('mongodb://localhost:27017/ecommerce');
 
 
+app.get('/', (req, res) => {
+    res.send("Welcome to the E-commerce API");
+});
+
 app.use('/api/users', userRoutes)
 
 
